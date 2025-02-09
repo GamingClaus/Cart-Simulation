@@ -2,12 +2,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Shop {
-    Map<Integer,Items> shopItems;
+     Map<Integer,Items> shopItems;
 
     Shop(){
         shopItems = new HashMap<>();
 
-        initializeShop();
+        initializeShop(); //setting up the shop at the start.
     }
 
     private void initializeShop(){
@@ -20,8 +20,9 @@ public class Shop {
         shopItems.put(7, new Items("Gloves", 8));
     }
 
+
     public void displayShopList(){
-        System.out.println("Displaying the Items");
+        System.out.println("*-------Displaying the Items----------*");
         for(Map.Entry<Integer,Items> shopItem : shopItems.entrySet()){
             System.out.println( "id:"+shopItem.getKey()+"," + shopItem.getValue().toString());
         }
